@@ -6,10 +6,16 @@
 </head>
 <body>	
 	<div ng-app="app">
-		<div ng-controller="testCtrl">
+		<div ng-controller="testCtrl" hidden>
 			Name: <input ng-model="name" type="text"><br>
 			<input type="checkbox" ng-model="inv"> invert
 			<p>Welcome <span ng-bind="invert()"></span>! <!--{{ invert() }}--></p>
+		</div>
+		<div ng-controller="testCtrl2">
+			Word: <input ng-model="word" type="text">
+			<ul>
+			<li ng-repeat="perm in permut(word)">{{ perm }}</li>
+			</ul>
 		</div>
 	</div>
 </body>
