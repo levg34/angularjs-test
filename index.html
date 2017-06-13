@@ -6,10 +6,10 @@
 </head>
 <body>	
 	<div ng-app="app">
-		<input ng-model="name" type="text">
 		<div ng-controller="testCtrl">
-		   HELLO <span ng-bind="invert()"></span>!
-		   <!--{{ invert() }}-->
+			Name: <input ng-model="name" type="text"><br>
+			<input type="checkbox" ng-model="inv"> invert
+			<p>Welcome <span ng-bind="invert()"></span>! <!--{{ invert() }}--></p>
 		</div>
 	</div>
 </body>
