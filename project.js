@@ -1,12 +1,14 @@
 var app = angular.module('app', [])
 
 app.controller('testCtrl', function($scope) {
-    //$scope.name = ''
+	$scope.name = 'stranger'
 	$scope.invert = function() {
-		if ($scope.name) {
-			return $scope.name.split('').reverse().join('')
-		} else {
-			return('')
+		var res = ''
+		if (!$scope.inv) {
+			res = $scope.name
+		} else if ($scope.name) {
+			res = $scope.name.split('').reverse().join('')
 		}
+		return res
 	}
 })
